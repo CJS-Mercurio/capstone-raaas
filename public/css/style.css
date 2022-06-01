@@ -1,0 +1,274 @@
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
+/* NAVBAR */
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px;
+    height: 103px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 60px;
+    background: #920003;
+    position: sticky;
+    z-index: 1;
+}
+
+.navbar-dark.scrolled {
+  background: #920003 !important;
+}
+
+.border-bottom {
+  line-height: 80px;
+  width: 100%;
+  min-width: 1530px;
+  margin-left: -15px;
+}
+
+.navbar-brand {
+	line-height: 46px;
+	padding: 0px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  height: 70px;
+}
+
+.header.active {
+    background-color: rgba(250, 250, 250, 0.98);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 32px;
+	text-transform: uppercase;
+	color: #fff!important;
+	transition: all 0.5s;
+}
+
+.navbar-brand em {
+	font-style: normal;
+	color: #f7c552;
+	font-size: 32px;
+
+}
+
+.header.active .navbar-brand {
+	color: #121212!important;
+}
+
+.header .navbar-brand {
+    font-weight: 800;
+}
+
+.header .navbar {
+    margin: 0;
+    border: none;
+}
+
+
+/* LOGIN FORM */
+
+body{
+	margin:0;
+	color: #6a6f8c;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.foot-lnk{
+	text-align:center;
+  margin-top: -40px;
+}
+
+.foot-lnk ul li {
+  margin: 40px;
+  list-style-type: none;
+}
+
+.reg_btn {
+  background-color: #28a745;
+}
+
+.reg_btn:hover{
+  transition: .5s ease;
+  background: #3EF115;
+}
+
+/* PROFESSOR REGISTRATION FORM */
+
+.prof-reg-form-wrap{
+	width: 100%;
+  margin-top: 30px;
+  margin-left: 35%;
+	max-width: 300px;
+	min-height: 1100px;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0, 1.0),0 17px 50px 0 rgba(0,0,0, 1.0);
+}
+
+.prof-reg-form-html{
+  width: 600px;
+	height: auto;
+	position:absolute;
+	padding: 20px 30px 50px 30px;
+	background: #f5f4f4;
+}
+
+.prof-reg-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+
+.prof-reg-form-wrap .prof-reg-form-html .prof-reg-form .registration-header h3 {
+  background-color: #ffbf00;
+  padding: 15px 10px 15px 10px;
+  text-align: center;
+  color: black;
+  font-style: bold;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* STUDENT REGISTRATION FORM */
+
+.std-reg-form-wrap{
+	width: 100%;
+  margin-top: 30px;
+  margin-left: 30%;
+	max-width: 300px;
+	min-height: 1100px;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0, 1.0),0 17px 50px 0 rgba(0,0,0, 1.0);
+}
+
+.std-reg-form-html{
+	width:100%;
+  width: 600px;
+	height: auto;
+	position:absolute;
+	padding: 20px 30px 50px 30px;
+	background: #f5f4f4;
+}
+
+.std-reg-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+
+.std-reg-form-wrap .std-reg-form-html .std-reg-form .std-registration-header h3 {
+  background-color: #ffbf00;
+  padding: 15px 10px 15px 10px;
+  text-align: center;
+  color: black;
+  font-style: bold;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+.separate {
+  min-width: 450px;
+  /* margin-left: -5px; */
+  height: 5px;
+  background: #cdd0cb;
+}
+
+.copyright .border-top {
+  width: 100%;
+  min-width: 1635px;
+  position: relative;
+  left: -90px;
+  top: -20px;
+}
+
+.copyright {
+  padding: 18px 0;
+  margin-top: 50px;
+  background-color: #920003;
+  min-height: 70px;
+  position: fixed;
+}
+
+.copyright .subtitle {
+  color: #fff;
+  font-size: 12px;
+  margin-top: 60px;
+}
+
+.copyright span {
+  background: #839FAD none repeat scroll 0 0;
+  display: block;
+  height: 1px;
+  margin-top: 0px;
+  position: relative;
+  width: 60%;
+  top: -10px;
+}
+
+.copyright span::after {
+  background: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  top: -4px;
+  width: 50%;
+}
+
+.copyright .title {
+  color: #fff;
+  position: relative;
+  top: -50px;
+  background: none;
+  left: 150px;
+}
+
+.copyright .title .subtitle-content {
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+  text-align: left;
+  opacity: 60%;
+}
+
+.copyright .ortac-copyright {
+  font-size: 15px;
+  text-align: justify;
+  position: relative;
+  top: -70px;
+  opacity: 20%;
+  min-width: 450px;
+  left: -98px;
+}
+
+.copyright .footer-copyright .ortac-copyright {
+  background-color: #000;
+  min-height: 100px;
+  padding-top: 10px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: -10px;
+  min-width: 1580px;
+  text-align: center;
+}
