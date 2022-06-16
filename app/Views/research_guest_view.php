@@ -49,6 +49,13 @@
         			<?php if($research): ?>
                <?php foreach ($research as $r): ?>
         	  			 <h2 class="researchTitle"><?= $r['title'];?></h2><hr>
+                   <!-- Working here Copyright-->
+                   <?php if($r['privacy'] == 1): ?>
+                                          <?php if($r['file'] != ''): ?>
+                                            <p class="alert alert-info" style="width: 225px;"><b>This research is Copyrighted.</b></p>
+                                          <?php endif; ?>
+                                      <?php endif; ?>
+                   <!-- Working here Copyright-->
                    <h4 class="forumText">Abstract</h4>
                    <?php if(empty($r['abstract'])): ?>
                      <center><i><h6 class="text-secondary mb-5">No abstract available</h6></i></center>

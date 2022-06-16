@@ -87,7 +87,7 @@ class Login extends BaseController{
 
 
 				'password' => [
-					'rules' => 'required|min_length[5]|max_length[16]',
+					'rules' => 'required|min_length[5]|max_length[25]',
 					'errors' =>[
 						'required' => 'Password is required',
 						'min_length' => 'Password should atleast contain {param} characters'

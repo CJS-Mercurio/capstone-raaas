@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-		public $baseURL = 'http://localhost/raaas/';
+		public $baseURL = 'http://localhost/capstone-raaas/';
  		//public $baseURL = 'https://raaas.com/';
 	    //public $baseURL = 'http://raaas.csovernightstaguig.online/';
 
