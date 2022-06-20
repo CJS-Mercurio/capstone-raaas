@@ -6,11 +6,16 @@ use \CodeIgniter\Controller;
 
 class TestMail extends Controller {
 
+
 	public function index() {
 
 		// echo "Test Email";
 		// $to = 'christjohn.mercurio04@gmail.com';
-		$to = 'christjohn.mercurio04@gmail.com';
+
+		// if the document is approved, send notification to the email of the user
+
+		// $to = 'christjohn.mercurio04@gmail.com';
+		$to = $this->request->getVar('email');
 		$subject = 'Research Approval';
 		$message = 'Congratulations, Your Research has been Approved!';
 
@@ -21,6 +26,7 @@ class TestMail extends Controller {
 		$email->setMessage($message);
 		//$filepath = 'public/assets/images/white.png';
 
+		
 		if ($email->send()) {
 
 			echo "Email Notification Sent Successfully";
@@ -29,5 +35,7 @@ class TestMail extends Controller {
 			$data = $email->printDebugger(['headers']);
 			print_r($data);
 		}
+
+		
 	}
 }
