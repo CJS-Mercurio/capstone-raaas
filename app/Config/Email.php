@@ -33,7 +33,7 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $protocol = 'sendmail';
+	public $protocol = 'smtp';
 
 	/**
 	 * The server path to Sendmail.
@@ -54,15 +54,17 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $SMTPUser = 'ortac.pupt@gmail.com';
+	// public $SMTPUser = 'ortac.pupt@gmail.com';
+	public $SMTPUser = 'puptraaas@gmail.com';
 
 	/**
 	 * SMTP Password
 	 *
 	 * @var string
 	 */
-	public $SMTPPass = 'puptortac';
-
+	// public $SMTPPass = 'puptortac';
+	public $SMTPPass = 'wqwwvsdndcqdhamx';
+	
 	/**
 	 * SMTP Port
 	 *
@@ -75,7 +77,7 @@ class Email extends BaseConfig
 	 *
 	 * @var integer
 	 */
-	public $SMTPTimeout = 5;
+	public $SMTPTimeout = 60;
 
 	/**
 	 * Enable persistent SMTP connections
