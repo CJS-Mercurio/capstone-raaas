@@ -356,7 +356,7 @@ class Login extends BaseController{
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com', 'RAAAS');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){

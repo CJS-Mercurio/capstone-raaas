@@ -252,7 +252,9 @@
 
             <div class="row">
               <div class="col-lg-10 ml-4">
-                <h3>Citation</h3>
+                <h3>Citation 
+                  <!-- Tooltip -->
+                  <span class="" data-toggle="tooltip" data-placement="right" title="If you use this research on your work please cite, download the citation">&#9432;</span></h3>
                 <a href="<?=base_url()?>/research/downloadCite/<?= $r['did'] ?>" class="fa fa-download text-success float-right"> Download</a>
 
                 <!-- Author, A.A.. (Year of Publication). The Title of work. -->

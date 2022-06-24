@@ -104,6 +104,30 @@ class UserResearchModel extends \CodeIgniter\Model{
 
 	}
 
+// Try lng po
+	public function getStudentResearchEmail(){
+
+		// Select 
+		// 	email, 
+		// from 
+		// 	user
+		// Where 
+		// 	email = research.id
+
+		$builder = $this->db->table('document_author');
+		$builder->select("user.email");
+		$builder->where('email', $email);
+		$result = $builder->get();
+
+		if(count($result->getResultArray()) == 1){
+
+			return $result->getRowArray();
+
+		}else{
+				return false;
+		}
+
+	}
 
 
 	public function getResearchOfStudent(){
