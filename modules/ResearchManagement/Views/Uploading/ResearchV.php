@@ -45,6 +45,13 @@
             <div class="row">
               <div class="col-10">
                 <h1 class="title"><?= $r['title'];?></h1>
+                <!-- Working here Copyright-->
+                  <?php if($r['privacy'] == 1): ?>
+                      <?php if($r['file'] != ''): ?>
+                        <p class="alert alert-info" style="width: 225px;"><b>This research is Copyrighted.</b></p>
+                      <?php endif; ?>
+                  <?php endif; ?>
+                <!-- Working here Copyright-->
               </div>
               <div class="col">
                 <?php if($favorite): ?>
@@ -245,7 +252,9 @@
 
             <div class="row">
               <div class="col-lg-10 ml-4">
-                <h3>Citation</h3>
+                <h3>Citation 
+                  <!-- Tooltip -->
+                  <span class="" data-toggle="tooltip" data-placement="right" title="If you use this research on your work please cite, download the citation">&#9432;</span></h3>
                 <a href="<?=base_url()?>/research/downloadCite/<?= $r['did'] ?>" class="fa fa-download text-success float-right"> Download</a>
 
                 <!-- Author, A.A.. (Year of Publication). The Title of work. -->

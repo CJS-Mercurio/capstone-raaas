@@ -220,14 +220,14 @@ class Register extends Controller{
 					if($this->registerStudentModel->createStudentUser($userdata)){
 
 						$to = $this->request->getVar('email');
-						$subject = 'Account Request - ORTAC';
+						$subject = 'Account Request - RAAAS';
 						$message = 'Hi ' .$this->request->getVar('first_name', FILTER_SANITIZE_STRING).'<br><br>'
 						. 'Thank you for your registration. Please wait for a notice if your account has been approved.'
 						. '<br>Thanks!';
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com','Research Analytics Archiving and Approval System');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){
@@ -435,14 +435,14 @@ class Register extends Controller{
 
 					if($this->registerProfessorModel->save($userdata)){
 						$to = $this->request->getVar('email');
-						$subject = 'Account Request - ORTAC';
+						$subject = 'Account Request - RAAAS';
 						$message = 'Hi ' .$this->request->getVar('f_firstname', FILTER_SANITIZE_STRING).'<br><br>'
 						. 'Thank you for your registration. Please wait for a notice if your account has been approved.'
 						. '<br>Thanks!';
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com','Research Analytics Archiving and Approval System');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){
@@ -607,14 +607,14 @@ class Register extends Controller{
 							if($this->userModel->createUser($userdata)){
 
 								$to = $this->request->getVar('email');
-								$subject = 'Account Request - ORTAC';
+								$subject = 'Account Request - RAAAS';
 								$message = 'Hi ' .$this->request->getVar('f_firstname', FILTER_SANITIZE_STRING).'<br><br>'
 								. 'Thank you for your registration. Please wait for a notice if your account has been approved.'
 								. '<br>Thanks!';
 
 								$email = \Config\Services::email();
 								$email->setTo($to);
-								$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+								$email->setFrom('puptraaas@gmail.com','Research Analytics Archiving and Approval System');
 								$email->setSubject($subject);
 								$email->setMessage($message);
 								if($email->send()){

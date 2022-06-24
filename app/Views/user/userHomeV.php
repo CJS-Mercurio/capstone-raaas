@@ -83,8 +83,7 @@
                                       <p class="text-primary cited">
                                         Not yet cited
                                     <?php else:?>
-                                        Cited by
-                                      </p>
+                                        Cited by </p>
                                       <?php echo $r['downloads'] ?>
                                     <?php endif;?>
                                     <p class="text-primary school-year">

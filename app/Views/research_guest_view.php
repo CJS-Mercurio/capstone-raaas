@@ -91,7 +91,16 @@
                        <h5 class="forumText">View Full Paper</h5>
                      </div>
                      <div class="col">
-                       <?php if($r['full_paper'] != ''): ?>
+                      <?php if($r['privacy'] == 1): ?>
+                           <?php if($r['file'] != ''): ?>
+                             <button type="button" onclick="login()" class="btn btn-info btn-sm"><span class="fa fa-download"></span>View here</button>
+                           <?php else: ?>
+                             <p>No available soft copy.</p>
+                           <?php endif; ?>
+                       <?php else: ?>
+                          <button type="button" class="btn btn-info btn-sm" disabled><span class="fa fa-download"></span> View here</button>
+                       <?php endif; ?>
+                       <!-- <?php if($r['full_paper'] != ''): ?>
                          <button type="button" onclick="login()" class="btn btn-info btn-sm"><span class="fa fa-download"></span> View here</button>
                        <?php else: ?>
                          <i>
@@ -99,7 +108,7 @@
                          </i>
                        <?php endif; ?>
                      <?php endforeach; ?>
-                   <?php endif; ?>
+                   <?php endif; ?> -->
                      </div>
                    </div>
 

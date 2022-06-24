@@ -772,6 +772,7 @@ class UploadResearch extends BaseController{
 
   }
 
+//  Citation 
   public function download_citation($id = null){
 
     $cite = $this->rModel->find($id);

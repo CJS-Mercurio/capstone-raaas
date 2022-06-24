@@ -14,8 +14,8 @@ class TestMail extends Controller {
 
 		// if the document is approved, send notification to the email of the user
 
-		// $to = 'christjohn.mercurio04@gmail.com';
-		$to = $this->request->getVar('email');
+		$to = 'christjohn.mercurio04@gmail.com';
+		// $to = $email;
 		$subject = 'Research Approval';
 		$message = 'Congratulations, Your Research has been Approved!';
 

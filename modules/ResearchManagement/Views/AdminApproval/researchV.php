@@ -196,6 +196,7 @@
               <?php endforeach; ?>
 
 			        <form method="post" action="<?=base_url()?>/research/adminApproveRes/<?= $id; ?>">
+              <!-- <form method="post" action="<?=base_url()?>/emailController/emailNotif/<?= $id; ?>"> -->
 			        	<h5>Are you sure you want to approve this research?</h5>
 			      </div>
 			      <div class="modal-footer">

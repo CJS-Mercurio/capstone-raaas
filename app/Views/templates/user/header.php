@@ -84,11 +84,41 @@ a
              <?php endif; ?>
            <?php endforeach; ?>
         <?php endif; ?>
-        </ul>
+<!-- Created By: Mercurio -->
+<!-- Current User -->
+         <?php if($current_user): ?>
+          <?php if($current_user['role_id'] == 1): ?>
+            <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
+              <strong>Wellcome! Admin</strong>
+            </div>
+          <?php endif; ?>
+
+          <?php if($current_user['role_id'] == 2): ?>
+            <div style="margin-left: 200px; padding: 3px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
+              <strong>Wellcome! Student</strong>
+            </div>
+          <?php endif; ?>
+
+          <?php if($current_user['role_id'] == 3): ?>
+            <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
+              <strong>Wellcome! Professor</strong>
+            </div>
+          <?php endif; ?>
+
+          <?php if($current_user['role_id'] == 4): ?>
+            <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
+              <strong>Wellcome! Faculty</strong>
+            </div>
+          <?php endif; ?>
+        <?php endif; ?>  
+<!-- Current User -->
+        </ul>           
         <form class="form-inline my-2 my-lg-0 ml-auto">
           <a class="btn btn-outline-light" href="<?=base_url()?>/logout"><i class="fa fa-sign-out-alt"></i> Logout </a>
         </form>
     </nav>
+
+
 
     <div class="container-fluid second-nav">
       <div class="row second-nav-row">

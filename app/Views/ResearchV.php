@@ -45,6 +45,13 @@
             <div class="row">
               <div class="col-10">
                 <h1><?= $r['title'];?></h1>
+                <!-- Working here Copyright-->
+                  <?php if($r['privacy'] == 1): ?>
+                      <?php if($r['file'] != ''): ?>
+                        <p class="alert alert-info" style="width: 225px;"><b>This research is Copyrighted.</b></p>
+                      <?php endif; ?>
+                  <?php endif; ?>
+                <!-- Working here Copyright-->
               </div>
               <div class="col">
                 <?php if($favorite): ?>
