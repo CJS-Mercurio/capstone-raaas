@@ -91,11 +91,12 @@ class UserResearchModel extends \CodeIgniter\Model{
 		// INNER JOIN document_author ON document_author.author_id = user.id AND document_author.document_id = 6
 
 		$builder = $this->db->table('document_author');
-		$builder->select('user.first_name, user.last_name, user.id, document_author.author_id, document_author.document_id');
+		$builder->select('user.first_name, user.last_name, user.id, user.email, document_author.author_id, document_author.document_id');
 		$builder->join('user', 'document_author.author_id = user.id AND document_author.document_id =' .$id);
 		$result = $builder->get();
 
 		if(count($result->getResultArray()) > 0){
+			
 			return $result->getResultArray();
 
 		}else{
@@ -103,32 +104,6 @@ class UserResearchModel extends \CodeIgniter\Model{
 		}
 
 	}
-
-// Try lng po
-	public function getStudentResearchEmail(){
-
-		// Select 
-		// 	email, 
-		// from 
-		// 	user
-		// Where 
-		// 	email = research.id
-
-		$builder = $this->db->table('document_author');
-		$builder->select("user.email");
-		$builder->where('email', $email);
-		$result = $builder->get();
-
-		if(count($result->getResultArray()) == 1){
-
-			return $result->getRowArray();
-
-		}else{
-				return false;
-		}
-
-	}
-
 
 	public function getResearchOfStudent(){
 
