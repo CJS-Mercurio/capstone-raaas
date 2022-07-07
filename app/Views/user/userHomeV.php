@@ -79,13 +79,13 @@
                                     <?php if($r['category_id']): ?>
                                       <?php echo $r['category_id']; ?>
                                     <?php endif; ?>
-                                    <?php if(empty($r['downloads'])):?>
+                                    <!-- <?php if(empty($r['downloads'])):?>
                                       <p class="text-primary cited">
                                         Not yet cited
                                     <?php else:?>
                                         Cited by </p>
                                       <?php echo $r['downloads'] ?>
-                                    <?php endif;?>
+                                    <?php endif;?> -->
                                     <p class="text-primary school-year">
                                       S.Y. <?php echo $r['school_year'];?>
                                     </p>

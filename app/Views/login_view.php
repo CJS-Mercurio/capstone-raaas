@@ -278,13 +278,17 @@
                       <div class="row">
                         <div class="col text-primary">
                             <h6>
-                              <?php echo $r['category_id']; ?><b> | </b>
-                              Not yet cited
-                              <?php if(empty($r['downloads'])):?>
-                                0
+                              <?php echo $r['category_id']; ?>
+                              <!-- <?php if(!empty($r['downloads'])):?>
+                                <?php $count = 0; ?>
+                                  <?php if($v['research_status'] == 3): ?>
+                                    Cited
+                                    <?php $count += 1; ?>
+                                    <?php echo $count; ?>
+                                  <?php endif; ?>
                               <?php else:?>
-                                <?php echo $r['downloads'] ?>
-                              <?php endif;?>
+                                Not yet cited
+                              <?php endif;?> -->
                               <b> | </b> S.Y. <?php echo $r['school_year'];?>
                             </h6>
                         </div>
