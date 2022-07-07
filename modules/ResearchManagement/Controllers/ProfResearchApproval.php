@@ -59,7 +59,7 @@ class ProfResearchApproval extends BaseController{
 	 		$this->data['faculty'] = $this->facultyModel->orderBy('id', 'DESC')->findAll();
 
 			$this->userModel =  new UserModel();
-			$this->data['user'] = $this->userModel->orderBy('id', 'DESC')->findAll();
+		  $this->data['user'] = $this->userModel->orderBy('id', 'DESC')->findAll();
 
 			$this->roleModel =  new RoleModel();
 			$this->data['role'] = $this->roleModel->orderBy('id', 'DESC')->findAll();
@@ -259,15 +259,51 @@ class ProfResearchApproval extends BaseController{
 				'detail_id' => $research['slugs'],
 
 			];
+
+			//get the research id and author id
+			$notif = $this->urModel->getResearchAuthors($id);
+
+			$mail_array =  array_column($notif, 'email');
+			// couting how many emails
+      $mail_count = count($mail_array); 
+
+      for($i=0; $i<$mail_count; $i++) {
+
+     		$subject = 'Research Status Update';
+				// $message = 'Hi <br><br>'
+				// . 'Congratulations! Your research has been approved.'
+				// . '<br><br>Sincerely yours, RAAAS!';
+
+				$email = \Config\Services::email();
+				$view = \Config\Services::renderer();
+
+				$mail_template = $view->render('email_template_approve');
+
+				$email->setTo($mail_array);
+				$email->setFrom('puptraaas@gmail.com', 'RAAAS');
+				$email->setSubject($subject);
+				$email->setMessage($mail_template);
+    	}
+
+			if($email->send()) {
+
+				session()->setTempdata('approved','Research is approved successfully.', 3);
+				return redirect()->to(base_url()."/research/adminApproval");
+
+			}else{
+
+				$data = $email->printDebugger(['headers']);
+				print_r($data);
+			}
+
 			if($this->alModel->save($act)){
 				session()->setTempdata('approved','Research is approved successfully.', 3);
 				return redirect()->to(base_url()."/research/adminApproval");
-			}
-		}else {
-			session()->setTempdata('notApproved','Research is not approved. Try again.', 3);
-			return redirect()->to(base_url()."/research/adminViewRes/".$id);
+			}else {
+				session()->setTempdata('notApproved','Research is not approved. Try again.', 3);
+				return redirect()->to(base_url()."/research/adminViewRes/".$id);
+			}	
 		}
-
 	}
 
 	public function admin_disapprove_research($id=null){
@@ -291,6 +327,7 @@ class ProfResearchApproval extends BaseController{
 			];
 
 		if($this->validate($rules)){
+
 			if($this->request->getMethod() == 'post'){
 
 				$reason = $this->request->getVar('reason');
@@ -302,19 +339,57 @@ class ProfResearchApproval extends BaseController{
 						'detail_id' => $research['slugs'],
 
 					];
-					if($this->alModel->save($act)){
+
+					//get the research id and author id
+					$notif = $this->urModel->getResearchAuthors($id);
+					//send email
+					
+					$mail_array =  array_column($notif, 'email');
+					// couting how many emails
+		      $mail_count = count($mail_array); 
+
+		      for($i=0; $i<$mail_count; $i++) {
+
+		     		$subject = 'Research Status Update';
+						// $message = 'Hi <br><br>'
+						// . 'Sorry, your research has been dispproved. Please login to RAAAS for more details.'
+						// . '<br><br>Sincerely yours, RAAAS!';
+
+						$email = \Config\Services::email();
+						$view = \Config\Services::renderer();
+
+						$mail_template = $view->render('email_template_disapprove');
+
+						$email->setTo($mail_array);
+						$email->setFrom('puptraaas@gmail.com', 'RAAAS');
+						$email->setSubject($subject);
+						$email->setMessage($mail_template);
+		    	}
+
+					if($email->send()) {
+
 						session()->setTempdata('disapproved','Research is disapproved.', 3);
-						return redirect()->to(base_url()."/research/adminApproval");
+					 	return redirect()->to(base_url()."/research/adminApproval");
+
+					}else{
+
+						$data = $email->printDebugger(['headers']);
+						print_r($data);
 					}
 
+					if($this->alModel->save($act)) {
 
-				}else{
-					session()->setTempdata('notDisapproved','Research is not disapproved. Try again.', 3);
-					return redirect()->to(base_url()."/research/adminViewRes/".$id);
+						session()->setTempdata('disapproved','Research is disapproved.', 3);
+						return redirect()->to(base_url()."/research/adminApproval");
 
+					}else {
+
+						session()->setTempdata('notDisapproved','Research is not disapproved. Try again.', 3);
+						return redirect()->to(base_url()."/research/adminViewRes/".$id);
+					}
 				}
-
 			}
+
 		}else{
 
 			$this->data['validation'] = $this->validator;
@@ -330,6 +405,7 @@ class ProfResearchApproval extends BaseController{
 		echo view('templates/user/header', $this->data);
 		echo view('Modules\ResearchManagement\Views\AdminApproval\pendingApproval', $this->data);
 		echo view('templates/user/footer');
-	}
+
+	} // end admin_disapprove_research
 
 }
