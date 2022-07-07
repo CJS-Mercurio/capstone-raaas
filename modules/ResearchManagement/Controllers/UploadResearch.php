@@ -778,6 +778,8 @@ class UploadResearch extends BaseController{
     $cite = $this->rModel->find($id);
     $count = $cite['downloads'] + 1;
 
+    $this->rModel->addCountCite($id, $count);
+
     $author = $this->urModel->getResearchAuthors($id);
 
           //////////////////////////////////apa
