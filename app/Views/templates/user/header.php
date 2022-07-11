@@ -84,33 +84,30 @@ a
              <?php endif; ?>
            <?php endforeach; ?>
         <?php endif; ?>
+        <li class="nav-item" style="margin-left: 100px; background-color: #C62310; border-radius: 25px; padding-left: 5px; padding-right: 5px;">
+          <a class="nav-link" aria-pressed ="true" href="<?=base_url()?>/home"> 
+            <?php if($current_user): ?>
+              <?php if($current_user['role_id'] == 1): ?>  
+                  <strong><i class="fas fa-user-circle"></i> Welcome! Admin</strong>
+              <?php endif; ?>
+
+              <?php if($current_user['role_id'] == 2): ?>
+                <strong><i class="fas fa-user-circle"></i> Welcome! Student</strong>
+              <?php endif; ?>
+
+              <?php if($current_user['role_id'] == 3): ?>
+                <strong><i class="fas fa-user-circle"></i> Welcome! Professor</strong>
+              <?php endif; ?>
+
+              <?php if($current_user['role_id'] == 4): ?>
+                <strong><i class="fas fa-user-circle"></i> Welcome! Faculty</strong>
+              <?php endif; ?>
+            <?php endif; ?>
+          </a> 
+        </li>
 <!-- Created By: Mercurio -->
 <!-- Current User -->
-         <?php if($current_user): ?>
-          <?php if($current_user['role_id'] == 1): ?>
-            <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Welcome! Admin</strong>
-            </div>
-          <?php endif; ?>
-
-          <?php if($current_user['role_id'] == 2): ?>
-            <div style="margin-left: 200px; padding: 3px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Welcome! Student</strong>
-            </div>
-          <?php endif; ?>
-
-          <?php if($current_user['role_id'] == 3): ?>
-            <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Welcome! Professor</strong>
-            </div>
-          <?php endif; ?>
-
-          <?php if($current_user['role_id'] == 4): ?>
-            <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Welcome! Faculty</strong>
-            </div>
-          <?php endif; ?>
-        <?php endif; ?>  
+          
 <!-- Current User -->
         </ul>           
         <form class="form-inline my-2 my-lg-0 ml-auto">
