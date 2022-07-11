@@ -1,6 +1,8 @@
 <?php
 //This page contains edit the existing file by using fpdi.
-require(dirname(__DIR__ ) . '/vendor/WatermarkPDF/WatermarkPDF.php');
+// require(dirname(__DIR__ ) . '/vendor/WatermarkPDF/WatermarkPDF.php');
+require(dirname(__DIR__ ). '/Modules/ResearchManagement/Controllers/Watermark.php');
+// require(dirname(__DIR__ ). '/Modules/ResearchManagement/Controllers/FPDI/fpdi.php');
 
 # ==========================
 
@@ -19,7 +21,7 @@ if (isset($_POST['dlf'])) {
 
 if(file_exists($pdfFile)){
   $watermarkText = "        R A A S";
-  $pdf = new WatermarkPDF($pdfFile, $watermarkText);
+  $pdf = new Watermark($pdfFile, $watermarkText);
   //$pdf = new FPDI();
   $pdf->AddPage();
   $pdf->SetFont('Arial', '', 12);

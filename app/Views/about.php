@@ -206,3 +206,55 @@
     </div>
   </div>
 </div>
+<!-- Enhancement Team Starts Here -->
+<div class="team-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="section-heading">
+          <span>Enhancement / Development Team</span>
+          <h2>Meet the greatest people</h2>
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="team-item">
+          <img src="./public/assets/images/man.png">
+          <div class="down-content">
+            <h4>Aaron Y. Cunanan</h4>
+            <span>Main Programmer</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="team-item">
+          <img src="./public/assets/images/woman-2.png" >
+          <div class="down-content">
+            <h4>April P. Azagra</h4>
+            <span>Document Analyst</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+          <div class="team-item">
+            <img src="./public/assets/images/woman.png">
+            <div class="down-content">
+              <h4>Iris Noreen A. Reyes</h4>
+              <span>Document Analyst</span>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="team-item">
+              <img src="./public/assets/images/man-2.png">
+                <div class="down-content">
+                  <h4>Christ John S. Mercurio</h4>
+                    <span>Assistant-Programmer</span>
+                </div>
+            </div>
+      </div>
+
+    </div>
+  </div>
+</div>

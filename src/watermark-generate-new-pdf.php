@@ -1,8 +1,8 @@
 <?php
 //This page create a new pdf file by using fpdf.
-require(dirname(__DIR__ ). '/vendor/WatermarkPDF/WatermarkPDF.php');
+require(dirname(__DIR__ ). '/Modules/ResearchManagement/Controllers/Watermark.php');
 
-$pdf = new WatermarkPDF(null,"CHINMAY KUMAR SAHU");
+$pdf = new Watermark(null,"CHINMAY KUMAR SAHU");
 $pdf->AddPage();
 $pdf->SetFont('Arial', '', 12);
 
