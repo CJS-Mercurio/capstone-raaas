@@ -89,25 +89,25 @@ a
          <?php if($current_user): ?>
           <?php if($current_user['role_id'] == 1): ?>
             <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Wellcome! Admin</strong>
+              <strong>Welcome! Admin</strong>
             </div>
           <?php endif; ?>
 
           <?php if($current_user['role_id'] == 2): ?>
             <div style="margin-left: 200px; padding: 3px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Wellcome! Student</strong>
+              <strong>Welcome! Student</strong>
             </div>
           <?php endif; ?>
 
           <?php if($current_user['role_id'] == 3): ?>
             <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Wellcome! Professor</strong>
+              <strong>Welcome! Professor</strong>
             </div>
           <?php endif; ?>
 
           <?php if($current_user['role_id'] == 4): ?>
             <div style="margin-left: 200px; padding: 1px; color: maroon;" class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-              <strong>Wellcome! Faculty</strong>
+              <strong>Welcome! Faculty</strong>
             </div>
           <?php endif; ?>
         <?php endif; ?>  
