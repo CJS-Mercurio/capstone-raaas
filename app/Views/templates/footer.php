@@ -5,8 +5,8 @@
     <div class="row">
       <div class="col-md-12">
         <div class="sub-footer">
-          <p>Copyright &copy; 2021
-            - Developed by 2BMT</p>
+          <p>Copyright &copy; 2022
+            - Developed by 2BMT and Enhanced by TBA</p>
         </div>
       </div>
     </div>
