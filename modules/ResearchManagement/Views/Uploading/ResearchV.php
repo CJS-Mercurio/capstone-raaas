@@ -205,8 +205,8 @@
                 <div class="col-sm-6 left-side">
                   <h2>View Research File</h2>
                   <?php if($r['privacy'] == 1): ?>
-                    <form method="post" action="<?=base_url()?>/src/watermark-edit-existing-pdf.php">
-                      <!-- <form method="post" action="<?=base_url()?>/research/downloadResearch/<?= $r['did'] ?>"> -->
+                    <!-- <form method="post" action="<?=base_url()?>/src/watermark-edit-existing-pdf.php"> -->
+                      <form method="post" action="<?=base_url()?>/research/downloadResearch/<?= $r['did'] ?>">
                       <input type="hidden" name="file" value="<?= $r['file'] ?>">
                       <?php if($r['file'] != ''): ?>
                         <button type="submit" name="dl" class="btn btn-success std-researchV mb-3">
@@ -226,7 +226,8 @@
                 </div>
                 <div class="col-sm-6 right-side">
                   <h2>View Full Paper</h2>
-                  <form method="post" action="<?=base_url()?>/src/watermark-edit-existing-pdf.php">
+                  <form method="post" action="<?=base_url()?>/research/downloadResearch/<?= $r['did'] ?>">
+                  <!-- <form method="post" action="<?=base_url()?>/src/watermark-edit-existing-pdf.php"> -->
                     <?php if($r['full_paper'] != ''): ?>
                         <?php if($r['privacy'] == 1): ?>
                           <input type="hidden" name="full" value="<?= $r['full_paper'] ?>">

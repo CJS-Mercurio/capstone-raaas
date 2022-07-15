@@ -739,15 +739,29 @@ class UploadResearch extends BaseController{
 
     $file = 'public/researches/'. $research['file'];
 
+    header("Content-Length: " . filesize ($file) ); 
+    header("Content-type: application/pdf"); 
+    header('Content-Disposition: attachment; filename="'.basename($file).'"');
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+    // ob_clean();
+    // flush();
+    // while (!feof($fp)) {
+    //    $buff = fread($fp, 1024);
+    //    print $buff;
+    // }
+    // exit;
+    $filepath = readfile($file);
+
     // echo $file;
     // die();
 
-    $pdfFile = $file;
-    $watermarkText = "RAAS";
-    $pdf = new Watermark($pdfFile, $watermarkText);
-    //$pdf = new FPDI();
-    $pdf->AddPage();
-    $pdf->SetFont('Arial', '', 12);
+    // $pdfFile = $file;
+    // $watermarkText = "RAAS";
+    // $pdf = new Watermark($pdfFile, $watermarkText);
+    // //$pdf = new FPDI();
+    // $pdf->AddPage();
+    // $pdf->SetFont('Arial', '', 12);
 
 
     /*$txt = "FPDF is a PHP class which allows to generate PDF files with pure PHP, that is to say " .
@@ -758,15 +772,15 @@ class UploadResearch extends BaseController{
     }*/
 
 
-    if($pdf->numPages>1) {
-        for($i=2;$i<=$pdf->numPages;$i++) {
-            //$pdf->endPage();
-            $pdf->_tplIdx = $pdf->importPage($i);
-            $pdf->AddPage();
-        }
-    }
+    // if($pdf->numPages>1) {
+    //     for($i=2;$i<=$pdf->numPages;$i++) {
+    //         //$pdf->endPage();
+    //         $pdf->_tplIdx = $pdf->importPage($i);
+    //         $pdf->AddPage();
+    //     }
+    // }
 
-    $pdf->Output(); //If you Leave blank then it should take default "I" i.e. Browser
+    // $pdf->Output(); //If you Leave blank then it should take default "I" i.e. Browser
 
 
 
