@@ -57,7 +57,6 @@
                                 <?php foreach ($downloads as $v): ?>
                                   <?php if($v['research_status'] == 3): ?>
                                     <tr>
-
                                       <?php $count += 1; ?>
                                           <td><?php echo $count; ?></td>
                                           <td><?php echo $v['title']; ?></td>

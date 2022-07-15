@@ -134,7 +134,7 @@ class UserAccounts extends BaseController{
 			 $user = $this->userModel->find($id);
 
 						$to = $user['email'];
-						$subject = 'Account Activation Link - ORTAC';
+						$subject = 'Account Activation Link - RAAAS';
 						$message = 'Hi ' .$user['first_name'].'.<br><br>'
 						. 'Thank you for your registration. Your account has been created successfully. <br>'
 						. 'Your <b>email</b> is set as your default <b>username</b>. <br><br>'
@@ -145,7 +145,7 @@ class UserAccounts extends BaseController{
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com', 'RAAAS');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){
@@ -173,18 +173,18 @@ class UserAccounts extends BaseController{
     if($this->userModel->disapprove_user_account($id)){
 
             $to = $user['email'];
-            $subject = 'Account Activation Link - ORTAC';
+            $subject = 'Account Activation Link - RAAAS';
             $message = 'Hi ' .$user['first_name'].'.<br><br>'
             . 'Thank you for your registration. Sorry your account has been declined. <br>'
             . 'Reason: <b>'. $this->request->getVar('reason').'.</b><br><br>'
-            . 'Please click the link below to register again to ORTAC '
+            . 'Please click the link below to register again to RAAAS '
             . 'provided that your reason for denial is cleared. <br>'
             . '<a href = "'. base_url().'/choose_role'.'">Register</a>'
             . '<br>Thanks!';
 
             $email = \Config\Services::email();
             $email->setTo($to);
-            $email->setFrom('ORTAC@gmail.com', 'ORTAC');
+            $email->setFrom('puptraaas@gmail.com', 'RAAAS');
             $email->setSubject($subject);
             $email->setMessage($message);
             if($email->send()){
@@ -246,7 +246,7 @@ class UserAccounts extends BaseController{
 			$student = $this->sModel->getStudentData($id);
 
 						$to = $student['email'];
-						$subject = 'Account Activation Link - ORTAC';
+						$subject = 'Account Activation Link - RAAAS';
 						$message = 'Hi ' .$student['first_name'].'.<br><br>'
 						. 'Thank you for your registration. Your account has been created successfully. <br>'
 						. 'Your <b>student number</b> is set as your default <b>username</b>. <br><br>'
@@ -259,7 +259,7 @@ class UserAccounts extends BaseController{
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ortac.pupt@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com', 'RAAAS');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){
@@ -288,18 +288,18 @@ class UserAccounts extends BaseController{
 			if($this->scModel->deleteStudentCourse($id)){
 
 						$to = $student['email'];
-						$subject = 'Account Activation Link - ORTAC';
+						$subject = 'Account Activation Link - RAAAS';
 						$message = 'Hi ' .$student['first_name'].'<br><br>'
 						. 'Thank you for your registration. Sorry your account has been declined. <br>'
 						. 'Reason: <b>'. $this->request->getVar('reason').'.</b><br><br>'
-						. 'Please click the link below to register again to ORTAC '
+						. 'Please click the link below to register again to RAAAS '
 						. 'provided that your reason for denial is cleared. <br>'
 						. '<a href = "'. base_url().'/choose_role'.'">Register</a>'
 						. '<br>Thanks!';
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com', 'RAAAS');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){
@@ -359,7 +359,7 @@ class UserAccounts extends BaseController{
 			 $professor = $this->pModel->find($id);
 
 						$to = $professor['email'];
-						$subject = 'Account Activation Link - ORTAC';
+						$subject = 'Account Activation Link - RAAAS';
 						$message = 'Hi ' .$professor['f_firstname'].'.<br><br>'
 						. 'Thank you for your registration. Your account has been created successfully. <br>'
 						. 'Your <b>faculty code</b> is set as your default <b>username</b>. <br><br>'
@@ -370,7 +370,7 @@ class UserAccounts extends BaseController{
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com', 'RAAAS');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){
@@ -398,18 +398,18 @@ class UserAccounts extends BaseController{
 		if($this->pModel->disapprove_user_account($id)){
 
 						$to = $prof['email'];
-						$subject = 'Account Activation Link - ORTAC';
+						$subject = 'Account Activation Link - RAAAS';
 						$message = 'Hi ' .$prof['f_firstname'].'.<br><br>'
 						. 'Thank you for your registration. Sorry your account has been declined. <br>'
 						. 'Reason: <b>'. $this->request->getVar('reason').'.</b><br><br>'
-						. 'Please click the link below to register again to ORTAC '
+						. 'Please click the link below to register again to RAAAS '
 						. 'provided that your reason for denial is cleared. <br>'
 						. '<a href = "'. base_url().'/choose_role'.'">Register</a>'
 						. '<br>Thanks!';
 
 						$email = \Config\Services::email();
 						$email->setTo($to);
-						$email->setFrom('ORTAC@gmail.com', 'ORTAC');
+						$email->setFrom('puptraaas@gmail.com', 'RAAAS');
 						$email->setSubject($subject);
 						$email->setMessage($message);
 						if($email->send()){
