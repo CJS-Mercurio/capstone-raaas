@@ -1,4 +1,15 @@
-<?php $page_session = \Config\Services::session()?>
+<?php $page_session = \Config\Services::session();
+
+session_start();
+  if (!isset($_SESSION['logged_user']))
+  {
+      header("Location: login_view");
+      die();
+  } else {
+
+      header("");
+  }
+?>
 <div class="container">
   <div class="row">
     <div class="col">

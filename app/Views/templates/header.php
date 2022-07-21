@@ -56,11 +56,11 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url()?>/about">About Us</a>
-                  </li>
-
-                  <li class="nav-item">
                     <a class="nav-link" href="<?=base_url()?>/metrics">Metrics</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="<?=base_url()?>/about">About Us</a>
                   </li>
                 </ul>
               </div>

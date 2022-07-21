@@ -7,7 +7,8 @@
       <div class="col-md-12 welcome-col">
         <h2>Welcome to</h2>
         <h1>Research Analytics Approval and Archiving System</h1>
-        <a href="<?=base_url()?>/about" type="button" class="btn btn-outline-light mt-3 learn-more" name="button"> LEARN MORE <i class="fa fa-arrow-right"></i> </a>
+        <a href="#announcement" type="button" class="btn btn-outline-light mt-3 learn-more" name="button"><i class="far fa-bell"></i> ANNOUNCEMENTS </a>
+        <a href="#researches" type="button" class="btn btn-outline-light mt-3 learn-more" name="button"><i class="far fa-folder-open"></i> RESEARCHES </a>
       </div>
     </div>
     <div class="login-wrap ml-auto">

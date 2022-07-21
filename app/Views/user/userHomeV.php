@@ -1,3 +1,15 @@
+<?php $page_session = \Config\Services::session();
+
+session_start();
+  if (!isset($_SESSION['logged_user']))
+  {
+      header("Location: login_view");
+      die();
+  } else {
+
+      header("");
+  }
+?>
 <div class="container breadcrumb-container">
   <div class="row">
     <div class="col">
@@ -32,7 +44,7 @@
         <?php endforeach; ?>
       <?php endif; ?>
 
-        <?php $status = 0; ?>
+<!--         <?php $status = 0; ?> -->
 
         <h3>List of Researches</h3>
         <div class="container-table">
