@@ -22,7 +22,7 @@
     	box-sizing: border-box;
     	background-position: center center;
     	background-size: cover;
-    	background-image: linear-gradient(to right, rgba(0,0,0, 0.5) 100%, transparent), url("<?=base_url()?>/public/assets/images/bg-library.jpg");
+    	background-image: linear-gradient(to right, rgba(0,0,0, 0.7) 100%, transparent), url("<?=base_url()?>/public/assets/images/bg-library.jpg");
        }
        
        .home-page{
@@ -30,7 +30,7 @@
         	box-sizing: border-box;
         	background-position: center center;
         	background-size: cover;
-        	background-image: linear-gradient(to right, rgba(0,0,0, 0.5) 100%, transparent), url("<?=base_url()?>/public/assets/images/bg-library.jpg");
+        	background-image: linear-gradient(to right, rgba(0,0,0, 0.7) 100%, transparent), url("<?=base_url()?>/public/assets/images/bg-library.jpg");
         	background-attachment: fixed;
         	height: 95vh;
         }
